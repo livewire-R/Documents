@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcohol Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <form id="alcoholCalculatorForm" class="calculator-form">
+            <div class="slider-container">
+                <label for="people">Number Of People Attending:</label>
+                <input type="range" id="people" name="people" min="1" max="100" value="1" class="slider">
+                <span id="peopleValue" class="slider-value">1</span>
+            </div>
+
+            <div class="beverage-choice">
+                <h2>Beverage Choice</h2>
+                <label for="wine">
+                    <input type="checkbox" id="wine" name="beverage" value="wine">
+                    Wine Will Be Served
+                </label>
+                <label for="beer">
+                    <input type="checkbox" id="beer" name="beverage" value="beer">
+                    Beer Will Be Served
+                </label>
+                <label for="liquor">
+                    <input type="checkbox" id="liquor" name="beverage" value="liquor">
+                    Liquor Will Be Served
+                </label>
+            </div>
+
+            <div class="slider-container">
+                <label for="drinkers">Number Of Drinkers:</label>
+                <input type="range" id="drinkers" name="drinkers" min="1" max="100" value="1" class="slider">
+                <span id="drinkersValue" class="slider-value">1</span>
+            </div>
+            
+            <div class="slider-container">
+                <label for="duration">Event Duration (Hours):</label>
+                <input type="range" id="duration" name="duration" min="1" max="24" value="5" class="slider">
+                <span id="durationValue" class="slider-value">5</span>
+            </div>
+            
+            <div class="slider-container">
+                <label for="drinkerType">Drinker Type:</label>
+                <select id="drinkerType" name="drinkerType">
+                    <option value="chill">Chill (light drinkers)</option>
+                    <option value="responsiblyturnt">Responsibly Turnt (moderate drinkers)</option>
+                    <option value="dedicatedpartiers">Dedicated Partiers (heavy drinkers)</option>
+                </select>
+            </div>
+            
+            <input type="submit" value="Calculate">
+        </form>
+        <div id="results">
+            <!-- Results will be displayed here -->
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
